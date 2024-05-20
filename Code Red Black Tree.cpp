@@ -19,20 +19,6 @@ class RedBlackTree {
   NodePtr root;
   NodePtr TNULL;
 
- void makeAllLeafNodesBlack(NodePtr node) {
-    if (node == TNULL) {
-        return;
-    }
-
-    
-    if (node->left == TNULL && node->right == TNULL) {
-        node->color = 0;
-    }
-
-    
-    makeAllLeafNodesBlack(node->left);
-    makeAllLeafNodesBlack(node->right);
-}
 
   void initializeNULLNode(NodePtr node, NodePtr parent) {
     node->data = 0;
@@ -422,7 +408,7 @@ void insert(int key) {
 
   void printTree() {
     if (root) {
-      makeAllLeafNodesBlack(this->root);
+      
       printHelper(this->root, "", true);
     }
   }
