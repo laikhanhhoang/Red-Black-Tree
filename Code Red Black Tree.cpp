@@ -432,5 +432,5 @@ int main() {
 		 ifs >> b[i];
 		bst.deleteNode(a[i]);
 	}
-  bst.printTree();*/
+  bst.printTree();
 }
